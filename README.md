@@ -20,6 +20,11 @@ This repository contains a fine-tuned version of Vicuna 7B, optimized for the me
 
 The Model was fine tuned on a single Nvidi A100 gpu for 7hrs.
 
+
+![training_loss](train.png) 
+
+![validation_loss](val_loss.png) 
+
 ## MODEL ASSESMENT
 
 The model was evaluated on the test set of [PubMedQA](https://arxiv.org/abs/1909.06146).PubMedQA is a dataset for Biomedical Research Question Answering. The task of PubMedQA is to answer research questions with yes/no/maybe based on the given Research papers abstract.
