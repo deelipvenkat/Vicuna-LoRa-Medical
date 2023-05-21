@@ -1,7 +1,6 @@
 # Vicuna-LoRa-Medical
 
 This repository contains a fine-tuned version of Vicuna 7B, optimized for the medical domain using the parameter-efficient fine-tuning technique called LoRa. The model was fine tuned on a subset of [wikimed](https://zenodo.org/record/5755155) dataset which contains 393,618 Wikipedia page texts related to medical domain. For fine tuning this model, a subset of 25000 articles were used which contains around 27.5 million tokens.
-<br>
 
 ### FINE TUNING SETTINGS
 
@@ -21,8 +20,6 @@ This repository contains a fine-tuned version of Vicuna 7B, optimized for the me
 
 The Model was Trained on a single Nvidi A100 gpu for 7hrs.
 
-<br>
-
 ## MODEL ASSESMENT
 
 The model was evaluated on the test set of PubMedQA which is a question-answering dataset that focuses on biomedical and clinical research.
@@ -41,8 +38,6 @@ The model was evaluated on the test set of PubMedQA which is a question-answerin
 |-----------------|--------------|----------------|
 |   Vicuna-Base   |    20.6%     |     6.33%      |
 |   Vicuna-LoRa   |    57.8%     |      13.25%    |
-
-<br>
 
 ## SUMMARY & FUTURE PROSPECTS
 
