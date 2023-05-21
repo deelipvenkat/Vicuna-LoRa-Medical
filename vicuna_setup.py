@@ -42,7 +42,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 ### Response:
 """
 
-def create_prompt(instruction,task='instruct') :
+def create_prompt(instruction) :
     
     return PROMPT_TEMPLATE.replace("[INSTRUCTION]", instruction)
 
