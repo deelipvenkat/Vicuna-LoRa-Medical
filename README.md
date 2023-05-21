@@ -9,7 +9,7 @@ This repository contains a fine-tuned version of Vicuna 7B, optimized for the me
 | Total Training Parameters   |      4,194,304  |
 | Num Train Epochs            |             3   |
 | Per Device Train Batch Size |             8   |
-| Optimizer                   |     adamw_torch |
+| Optimizer                   |         adamw   |
 | Gradient Accumulation Steps |            16   |
 | Weight Decay                |          0.01   |
 | Learning Rate               |       0.00005   |
