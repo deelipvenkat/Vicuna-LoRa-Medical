@@ -18,11 +18,11 @@ This repository contains a fine-tuned version of Vicuna 7B, optimized for the me
 | LoRA Alpha                  |            16   |
 | LoRA Dropout                |           0.1   |
 
-The Model was Trained on a single Nvidi A100 gpu for 7hrs.
+The Model was fine tuned on a single Nvidi A100 gpu for 7hrs.
 
 ## MODEL ASSESMENT
 
-The model was evaluated on the test set of PubMedQA which is a question-answering dataset that focuses on biomedical and clinical research.
+The model was evaluated on the test set of [PubMedQA](https://arxiv.org/abs/1909.06146).PubMedQA is a dataset for Biomedical Research Question Answering. The task of PubMedQA is to answer research questions with yes/no/maybe based on the given Research papers abstract.
 <br>
 3 shot performance on PubMedQA Test Set without outputs processing to the task.
 
@@ -40,6 +40,8 @@ The model was evaluated on the test set of PubMedQA which is a question-answerin
 |   Vicuna-LoRa   |    57.8%     |      13.25%    |
 
 The post-processing involved removing any outputs containing punctuation marks and converting the words to lowercase, aligning them with the target labels.The same post-processing steps were applied to both the base model and the fine-tuned model, ensuring a fair comparison.
+
+The precision & recall of the fine tuned model for the yes & no class label instances improved , but had difficulty for instances where there is ambiguity ('maybe' class label instances). Also both the base model & the fine tuned model predictions were senstitive to prompts ,so further prompt engineering is necessary to find a suitable prompt template for the task.
 
 ## SUMMARY & FUTURE PROSPECTS
 
