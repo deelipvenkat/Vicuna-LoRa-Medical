@@ -1,13 +1,13 @@
 # Vicuna-LoRa-Medical
 
-This repository contains a fine-tuned version of Vicuna 7B, optimized for the medical domain using Low Rank Adaptations(LoRa) . The model was fine tuned on a subset of [wikimed](https://zenodo.org/record/5755155) dataset which contains 393,618 Wikipedia page texts related to medical domain. For fine tuning this model, a subset of 25000 articles were used which contains around 27.5 million tokens.
+This repository contains a fine-tuned version of Vicuna 7B, optimized for the medical domain using Low Rank Adaptation(LoRa) . The model was fine tuned on a subset of [wikimed](https://zenodo.org/record/5755155) dataset which contains 393,618 Wikipedia page texts related to medical domain. For fine tuning this model, a subset of 25000 articles were used which contains around 27.5 million tokens.
 
 ### FINE TUNING SETTINGS
 
 | Parameter                   | Value           |
 |-----------------------------|-----------------|
 | Total Training Parameters   |      4,194,304  |
-| Num Train Epochs            |             3   |
+|   Epochs Trained            |             3   |
 | Per Device Train Batch Size |             8   |
 | Optimizer                   |         adamw   |
 | Gradient Accumulation Steps |            16   |
@@ -18,8 +18,7 @@ This repository contains a fine-tuned version of Vicuna 7B, optimized for the me
 | LoRA Alpha                  |            16   |
 | LoRA Dropout                |           0.1   |
 
-The Model was fine tuned on a single Nvidi A100 gpu for 7hrs.
-
+The Model was fine tuned on a Nvidia A100 gpu for 7hrs.
 
 ![training_loss](train.png) 
 
@@ -27,7 +26,7 @@ The Model was fine tuned on a single Nvidi A100 gpu for 7hrs.
 
 ## MODEL ASSESMENT
 
-The model was evaluated on the test set of [PubMedQA](https://arxiv.org/abs/1909.06146).PubMedQA is a dataset for Biomedical Research Question Answering. The task of PubMedQA is to answer research questions with yes/no/maybe based on the given Research papers abstract.
+The model was evaluated on the test set of [PubMedQA](https://arxiv.org/abs/1909.06146).PubMedQA is a dataset for Biomedical Research Question Answering. The task of PubMedQA is to answer research questions with yes/no/maybe based on the Research papers abstract.
 <br>
 
 3 shot performance on PubMedQA Test Set without outputs processing to the task.

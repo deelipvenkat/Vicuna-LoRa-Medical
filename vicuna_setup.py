@@ -51,7 +51,8 @@ def create_prompt(instruction) :
 def generate_response(prompt, model,tokenizer,config) :
     encoding = tokenizer(prompt, return_tensors="pt")
     input_ids = encoding["input_ids"].to('cuda')
- 
+    #print("tokenzied input")
+    #print(input_ids)
     generation_config = config
 
     with torch.inference_mode():
@@ -79,6 +80,11 @@ def vicuna_inference(prompt, model,tokenizer,config):
 
     prompt = create_prompt(prompt)
     response = generate_response(prompt, model,tokenizer,config)
+    #print("answer tokens from the model before formatting")
+    #print(response)
+    
     b=format_response(response,tokenizer)
+    #print(b)
+    #print("response generated before 3 hashtag split- answer")
     a=b.split('###')
     return a[0]
