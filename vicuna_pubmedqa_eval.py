@@ -222,8 +222,8 @@ def output_preprocessing(dict_ans):
         l_=dict_ans[i].split(" ")
         
         if l_[0]=="" and len(l_)>1:
-            dict_ans[i]=l_[1].lower()
-
+            dict_ans[i]=l_[1].lower()    
+            
         else:
             dict_ans[i]=l_[0].lower()    
 

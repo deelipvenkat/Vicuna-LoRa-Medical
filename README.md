@@ -52,7 +52,7 @@ The precision & recall of the fine tuned model for the yes & no class label inst
 
 The fine-tuning of Vicuna 7B using the parameter-efficient technique LoRa has shown promising improvements in model performance for the medical domain. However, further fine-tuning on larger and more diverse datasets in medical domain like reserach papers , , along with longer training on a multi-GPU setup, is required to achieve even better results. Looking ahead, the project has the potential to be extended to even more powerful models such as the 13B or 30 billion parameter models, which are expected to deliver enhanced performance in the medical domain. This progress indicates that the current fine-tuning approach is on the right track and holds promise for establishing a foundational model for the medical domain.
 
-
+<br>
 #### Prompt Template used for evaluation of the model on PubMedQA test set
 
 ```

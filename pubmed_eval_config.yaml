@@ -1,0 +1,12 @@
+temperature: 0.4
+top_p: 0.4
+top_k: 50
+repetition_penalty: 1.4
+beam_size: 1
+max_length: 3
+min_length: 1
+max_time: 3
+max_new_tokens: 10
+begin_suppress_tokens: [268,13,29901,259]
+supress_tokens: [13]
+force_words_ids: [4874, 694, 5505]
